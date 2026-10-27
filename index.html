@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Berdo Fort Games</title>
+  <title>Berdo Fort Games - Baixe os jogos</title>
+  <meta name="description" content="Berdo Fort Games: jogos para crianças que respeitam a infância. Baixe O Cangaceiro do Cuscuz e O Mundo da Yuki no celular.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://appcalangodigital.github.io/berdofortgames_baixarjogo/">
   <meta property="og:title" content="Berdo Fort Games - Jogos que respeitam as crianças">
-  <meta property="og:description" content="O Cangaceiro do Cuscuz: um jogo com a identidade do Nordeste, criado para não gerar ansiedade nem vício. Baixe agora no celular!">
+  <meta property="og:description" content="Baixe O Cangaceiro do Cuscuz e O Mundo da Yuki no celular. Jogos criados para não gerar ansiedade nem vício.">
   <meta property="og:image" content="https://appcalangodigital.github.io/berdofortgames_baixarjogo/preview.png">
   <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
@@ -21,58 +22,130 @@
 
   <style>
     * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; }
+    html { min-height: 100%; }
     body {
-      display: flex; align-items: center; justify-content: center;
-      padding: 24px; text-align: center;
+      margin: 0; padding: 24px 18px 36px; text-align: center;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      color: #fff7e6;
+      color: #fff7e6; min-height: 100vh;
       background: linear-gradient(180deg, #2a1608 0%, #7a3b0c 55%, #d9822b 100%);
+      background-attachment: fixed;
     }
-    .card { width: 100%; max-width: 380px; }
-    .logo {
-      width: 160px; height: 160px; border-radius: 32px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.45);
-      margin-bottom: 20px;
+    .wrap { width: 100%; max-width: 440px; margin: 0 auto; }
+    h1 { margin: 0 0 4px; font-size: 2rem; letter-spacing: 2px; }
+    .tag { margin: 0 0 18px; font-size: 1.05rem; color: #ffd9a0; }
+    .hero { width: 100%; height: auto; display: block; border-radius: 22px; box-shadow: 0 10px 30px rgba(0,0,0,.45); margin-bottom: 22px; }
+    h2 { margin: 0 0 12px; font-size: 1.15rem; color: #ffd9a0; letter-spacing: 1px; }
+    .jogo {
+      display: flex; align-items: center; gap: 14px; text-align: left;
+      background: rgba(26,15,5,.55); border: 1px solid rgba(255,217,160,.35);
+      border-radius: 20px; padding: 14px; margin-bottom: 16px;
     }
-    h1 { margin: 0 0 6px; font-size: 2rem; letter-spacing: 2px; }
-    .sub { margin: 0 0 28px; font-size: 1.15rem; color: #ffd9a0; }
+    .jogo img { width: 84px; height: 84px; border-radius: 20px; flex: none; box-shadow: 0 6px 16px rgba(0,0,0,.4); background: #3a1d0f; }
+    .jogo .info { flex: 1; min-width: 0; }
+    .jogo h3 { margin: 0 0 2px; font-size: 1.1rem; }
+    .jogo p { margin: 0 0 10px; font-size: .88rem; color: #ffe8c4; }
     .btn {
-      display: block; width: 100%; padding: 16px 20px;
-      background: #f5b700; color: #2a1608; font-weight: 800; font-size: 1.15rem;
-      text-decoration: none; border-radius: 14px;
-      box-shadow: 0 6px 0 #a87a00, 0 10px 20px rgba(0,0,0,.35);
+      display: block; width: 100%; padding: 12px 14px;
+      background: #f5b700; color: #2a1608; font-weight: 800; font-size: 1rem; text-align: center;
+      text-decoration: none; border-radius: 12px;
+      box-shadow: 0 5px 0 #a87a00, 0 8px 16px rgba(0,0,0,.3);
     }
-    .btn:active { transform: translateY(3px); box-shadow: 0 3px 0 #a87a00; }
+    .btn.rosa { background: #ff8fb8; box-shadow: 0 5px 0 #b34a77, 0 8px 16px rgba(0,0,0,.3); }
+    .btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #a87a00; }
     .dica { margin-top: 18px; font-size: .95rem; color: #ffe8c4; }
   </style>
 </head>
 <body>
-  <main class="card">
-    <img class="logo" src="https://appcalangodigital.github.io/berdofortgames_oxente/icon-512.png" alt="Berdo Fort Games">
+  <main class="wrap">
     <h1>BERDO FORT GAMES</h1>
-    <p class="sub">O Cangaceiro do Cuscuz 🌽</p>
+    <p class="tag">Jogos que respeitam as crianças 🎮</p>
 
-    <a id="baixar" class="btn" href="https://appcalangodigital.github.io/berdofortgames_oxente/">📲 BAIXAR O JOGO</a>
+    <!-- Imagem com vários jogos -->
+    <svg class="hero" viewBox="0 0 440 230" role="img" aria-label="Vários jogos da Berdo Fort Games: O Cangaceiro do Cuscuz, O Mundo da Yuki e novos jogos em breve">
+      <defs>
+        <linearGradient id="fundo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a1d0f"/><stop offset="1" stop-color="#7a3b0c"/></linearGradient>
+        <linearGradient id="s1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f8fe8"/><stop offset="1" stop-color="#ffe2a8"/></linearGradient>
+        <linearGradient id="s2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ec8ff"/><stop offset="1" stop-color="#ffe3f1"/></linearGradient>
+        <linearGradient id="s3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b3a9a"/><stop offset="1" stop-color="#ff9b7a"/></linearGradient>
+      </defs>
+      <rect width="440" height="230" fill="url(#fundo)"/>
+      <g fill="#ffd34f" opacity=".5"><circle cx="30" cy="30" r="3"/><circle cx="410" cy="40" r="3"/><circle cx="215" cy="18" r="2.5"/><circle cx="60" cy="205" r="2.5"/><circle cx="385" cy="200" r="3"/></g>
+
+      <g transform="translate(18,34) rotate(-4 60 80)">
+        <rect width="124" height="160" rx="14" fill="#1a0f05"/>
+        <rect x="6" y="6" width="112" height="148" rx="10" fill="url(#s1)"/>
+        <circle cx="92" cy="30" r="13" fill="#ffe34d"/>
+        <path d="M6 110 Q40 78 70 100 T118 96 V154 H6Z" fill="#e9b86f"/>
+        <rect x="6" y="120" width="112" height="34" fill="#c68a4d"/><rect x="6" y="120" width="112" height="7" fill="#e8bf72"/>
+        <rect x="26" y="82" width="9" height="40" rx="4" fill="#3d8f4a"/><rect x="17" y="94" width="9" height="5" rx="2" fill="#3d8f4a"/><rect x="35" y="90" width="9" height="5" rx="2" fill="#3d8f4a"/>
+        <circle cx="72" cy="104" r="9" fill="#e0a070"/><rect x="64" y="111" width="16" height="18" rx="4" fill="#e8d9b0"/>
+        <ellipse cx="72" cy="97" rx="15" ry="4" fill="#f7f4ee"/><path d="M64 97 A8 8 0 0 1 80 97Z" fill="#1f4fb8"/>
+        <path d="M100 126 q10 -14 20 0Z" fill="#ffd21a" stroke="#2b2b33" stroke-width="1.5"/>
+        <text x="62" y="148" font-size="10" font-weight="800" text-anchor="middle" fill="#fff7e6" font-family="system-ui,Arial">CUSCUZ</text>
+      </g>
+
+      <g transform="translate(158,18)">
+        <rect width="124" height="170" rx="14" fill="#2b1540"/>
+        <rect x="6" y="6" width="112" height="158" rx="10" fill="url(#s2)"/>
+        <circle cx="30" cy="30" r="12" fill="#fff3a0"/>
+        <path d="M6 112 Q40 86 70 104 T118 100 V164 H6Z" fill="#f3b6d0"/>
+        <rect x="6" y="128" width="112" height="36" fill="#8fd16a"/>
+        <g fill="#d62828"><rect x="78" y="76" width="6" height="52"/><rect x="104" y="76" width="6" height="52"/><rect x="72" y="84" width="44" height="6"/><path d="M70 78 Q94 68 118 78 L116 72 Q94 62 72 72Z"/></g>
+        <rect x="28" y="106" width="14" height="22" rx="4" fill="#4a2a8a"/>
+        <circle cx="35" cy="98" r="9" fill="#f6cfa2"/><path d="M26 98 A9 9 0 0 1 44 98 V92 A9 9 0 0 0 26 92Z" fill="#15101c"/><ellipse cx="25" cy="104" rx="3" ry="6" fill="#15101c"/><ellipse cx="45" cy="104" rx="3" ry="6" fill="#15101c"/>
+        <rect x="31" y="128" width="3" height="8" fill="#2bb6a8"/><rect x="38" y="128" width="3" height="8" fill="#2bb6a8"/>
+        <ellipse cx="62" cy="126" rx="11" ry="7" fill="#fffaf0" stroke="#cbbd9f"/><circle cx="73" cy="119" r="6.5" fill="#fffaf0" stroke="#cbbd9f"/>
+        <path d="M68 115 L70 107 L75 113Z M75 113 L79 107 L80 116Z" fill="#e8c48a"/><circle cx="78" cy="120" r="1.4" fill="#2b2b33"/>
+        <path d="M44 113 Q54 122 66 124" stroke="#e63946" stroke-width="1.6" fill="none"/>
+        <text x="62" y="156" font-size="10" font-weight="800" text-anchor="middle" fill="#3b2150" font-family="system-ui,Arial">YUKI</text>
+      </g>
+
+      <g transform="translate(300,34) rotate(4 60 80)">
+        <rect width="124" height="160" rx="14" fill="#1a0f05"/>
+        <rect x="6" y="6" width="112" height="148" rx="10" fill="url(#s3)"/>
+        <g fill="#fff" opacity=".8"><circle cx="24" cy="26" r="1.6"/><circle cx="90" cy="20" r="1.6"/><circle cx="104" cy="48" r="1.6"/><circle cx="40" cy="52" r="1.6"/></g>
+        <circle cx="62" cy="78" r="32" fill="#ffffff22"/>
+        <text x="62" y="92" font-size="44" font-weight="900" text-anchor="middle" fill="#fff" font-family="system-ui,Arial">?</text>
+        <text x="62" y="140" font-size="10" font-weight="800" text-anchor="middle" fill="#fff" font-family="system-ui,Arial">EM BREVE</text>
+      </g>
+    </svg>
+
+    <h2>ESCOLHA O SEU JOGO</h2>
+
+    <section class="jogo">
+      <img src="https://appcalangodigital.github.io/berdofortgames_oxente/icon-512.png" alt="O Cangaceiro do Cuscuz">
+      <div class="info">
+        <h3>O Cangaceiro do Cuscuz 🌽</h3>
+        <p>Aventura com a identidade do Nordeste.</p>
+        <a class="btn baixar" data-path="baixar-cangaceiro-cuscuz" data-titulo="Baixar O Cangaceiro do Cuscuz" href="https://appcalangodigital.github.io/berdofortgames_oxente/">📲 BAIXAR</a>
+      </div>
+    </section>
+
+    <section class="jogo">
+      <img src="https://appcalangodigital.github.io/berdofortgames_omundodayuki/icon-512.png" alt="O Mundo da Yuki">
+      <div class="info">
+        <h3>O Mundo da Yuki 🐶</h3>
+        <p>Passeio com a cachorrinha Yuki. Para crianças de 5 a 9+ anos.</p>
+        <a class="btn rosa baixar" data-path="baixar-mundo-da-yuki" data-titulo="Baixar O Mundo da Yuki" href="https://appcalangodigital.github.io/berdofortgames_omundodayuki/">📲 BAIXAR</a>
+      </div>
+    </section>
 
     <p class="dica">Abra no celular e toque em "Instalar no celular".</p>
   </main>
 
   <script>
-    // Conta cada clique no botão "Baixar o jogo" e depois abre o jogo
-    document.getElementById('baixar').addEventListener('click', function (e) {
-      var link = this.href;
-      try {
-        if (window.goatcounter && window.goatcounter.count) {
-          e.preventDefault();
-          window.goatcounter.count({
-            path: 'clique-baixar-jogo',
-            title: 'Clique em Baixar o Jogo',
-            event: true
-          });
-          setTimeout(function () { window.location.href = link; }, 300);
-        }
-      } catch (err) { /* se der erro, o link abre normalmente */ }
+    // Conta cada clique em "Baixar" separado por jogo e depois abre o jogo
+    document.querySelectorAll('.baixar').forEach(function (b) {
+      b.addEventListener('click', function (e) {
+        var link = this.href, path = this.dataset.path, titulo = this.dataset.titulo;
+        try {
+          if (window.goatcounter && window.goatcounter.count) {
+            e.preventDefault();
+            window.goatcounter.count({ path: path, title: titulo, event: true });
+            setTimeout(function () { window.location.href = link; }, 300);
+          }
+        } catch (err) { /* se der erro, o link abre normalmente */ }
+      });
     });
   </script>
 </body>
