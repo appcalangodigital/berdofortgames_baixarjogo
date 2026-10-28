@@ -9,18 +9,23 @@
   <meta property="og:url" content="https://appcalangodigital.github.io/berdofortgames_baixarjogo/">
   <meta property="og:title" content="Berdo Fort Games - Jogos que respeitam as crianças">
   <meta property="og:description" content="Baixe O Cangaceiro do Cuscuz, O Mundo da Yuki, Memocolor e Liloca Patinadora no celular. Jogos criados para não gerar ansiedade nem vício.">
-  <meta property="og:image" content="https://appcalangodigital.github.io/berdofortgames_baixarjogo/preview.png">
+  <meta property="og:image" content="https://appcalangodigital.github.io/berdofortgames_baixarjogo/preview.png?v=2">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:secure_url" content="https://appcalangodigital.github.io/berdofortgames_baixarjogo/preview.png">
+  <meta property="og:image:secure_url" content="https://appcalangodigital.github.io/berdofortgames_baixarjogo/preview.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Berdo Fort Games: jogos que respeitam as crianças">
   <meta property="og:site_name" content="Berdo Fort Games">
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://appcalangodigital.github.io/berdofortgames_baixarjogo/preview.png">
+  <meta name="twitter:image" content="https://appcalangodigital.github.io/berdofortgames_baixarjogo/preview.png?v=2">
   <meta name="theme-color" content="#1a0f05">
-  <link rel="icon" href="https://appcalangodigital.github.io/berdofortgames_oxente/icon-512.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Berdo Games">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
 
   <!-- Contador de visitas (GoatCounter) -->
   <script data-goatcounter="https://berdofortgamesbaixarjogo.goatcounter.com/count"
@@ -60,6 +65,8 @@
     .btn.azul { background: #7fd0ff; box-shadow: 0 5px 0 #2f7fae, 0 8px 16px rgba(0,0,0,.3); }
     .btn.lilas { background: #c9a0ff; box-shadow: 0 5px 0 #7a4fb5, 0 8px 16px rgba(0,0,0,.3); }
     .btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #a87a00; }
+    .instalar { margin: 0 0 22px; background: #7bdcb5; color: #2a1608; border: 0; cursor: pointer; font-family: inherit; box-shadow: 0 5px 0 #3f9c7a, 0 8px 16px rgba(0,0,0,.3); }
+    .instalar[hidden] { display: none; }
     .dica { margin-top: 18px; font-size: .95rem; color: #ffe8c4; }
   </style>
 </head>
@@ -68,18 +75,19 @@
     <h1>BERDO FORT GAMES</h1>
     <p class="tag">Jogos que respeitam as crianças 🎮</p>
 
-    <!-- Imagem com vários jogos -->
-    <svg class="hero" viewBox="0 0 440 230" role="img" aria-label="Vários jogos da Berdo Fort Games: O Cangaceiro do Cuscuz, O Mundo da Yuki, Memocolor e Liloca Patinadora">
-      <defs>
-        <linearGradient id="fundo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a1d0f"/><stop offset="1" stop-color="#7a3b0c"/></linearGradient>
-        <linearGradient id="s1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f8fe8"/><stop offset="1" stop-color="#ffe2a8"/></linearGradient>
-        <linearGradient id="s2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ec8ff"/><stop offset="1" stop-color="#ffe3f1"/></linearGradient>
-        <linearGradient id="s3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b3a9a"/><stop offset="1" stop-color="#ff9b7a"/></linearGradient>
-      </defs>
-      <rect width="440" height="230" fill="url(#fundo)"/>
-      <g fill="#ffd34f" opacity=".5"><circle cx="30" cy="30" r="3"/><circle cx="410" cy="40" r="3"/><circle cx="215" cy="18" r="2.5"/><circle cx="60" cy="205" r="2.5"/><circle cx="385" cy="200" r="3"/></g>
-
-      <g transform="translate(18,34) rotate(-4 60 80)">
+    <!-- Imagem com os 4 jogos -->
+    <svg class="hero" viewBox="0 0 440 190" role="img" aria-label="Os 4 jogos da Berdo Fort Games: O Cangaceiro do Cuscuz, O Mundo da Yuki, Memocolor e Liloca Patinadora">
+<defs>
+<linearGradient id="fundo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a1d0f"/><stop offset="1" stop-color="#7a3b0c"/></linearGradient>
+<linearGradient id="s1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f8fe8"/><stop offset="1" stop-color="#ffe2a8"/></linearGradient>
+<linearGradient id="s2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ec8ff"/><stop offset="1" stop-color="#ffe3f1"/></linearGradient>
+<linearGradient id="s3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b3a9a"/><stop offset="1" stop-color="#ff9b7a"/></linearGradient>
+<linearGradient id="s4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2160"/><stop offset="1" stop-color="#8a6fd0"/></linearGradient>
+<linearGradient id="s5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8f8ff"/><stop offset="1" stop-color="#a8dcf5"/></linearGradient>
+</defs>
+<rect width="440" height="190" fill="url(#fundo)"/>
+<g fill="#ffd34f" opacity=".5"><circle cx="30" cy="20" r="3"/><circle cx="410" cy="26" r="3"/><circle cx="215" cy="12" r="2.5"/><circle cx="60" cy="176" r="2.5"/><circle cx="385" cy="172" r="3"/></g>
+<g transform="translate(10.6,30) scale(0.78) rotate(-5 62 80)">
         <rect width="124" height="160" rx="14" fill="#1a0f05"/>
         <rect x="6" y="6" width="112" height="148" rx="10" fill="url(#s1)"/>
         <circle cx="92" cy="30" r="13" fill="#ffe34d"/>
@@ -91,8 +99,7 @@
         <path d="M100 126 q10 -14 20 0Z" fill="#ffd21a" stroke="#2b2b33" stroke-width="1.5"/>
         <text x="62" y="148" font-size="10" font-weight="800" text-anchor="middle" fill="#fff7e6" font-family="system-ui,Arial">CUSCUZ</text>
       </g>
-
-      <g transform="translate(158,18)">
+<g transform="translate(118.0,22) scale(0.78) rotate(-1.5 62 80)">
         <rect width="124" height="170" rx="14" fill="#2b1540"/>
         <rect x="6" y="6" width="112" height="158" rx="10" fill="url(#s2)"/>
         <circle cx="30" cy="30" r="12" fill="#fff3a0"/>
@@ -107,15 +114,35 @@
         <path d="M44 113 Q54 122 66 124" stroke="#e63946" stroke-width="1.6" fill="none"/>
         <text x="62" y="156" font-size="10" font-weight="800" text-anchor="middle" fill="#3b2150" font-family="system-ui,Arial">YUKI</text>
       </g>
-
-      <g transform="translate(300,34) rotate(4 60 80)">
+<g transform="translate(225.3,22) scale(0.78) rotate(1.5 62 80)">
         <rect width="124" height="160" rx="14" fill="#1a0f05"/>
         <rect x="6" y="6" width="112" height="148" rx="10" fill="url(#s3)"/>
         <rect x="22" y="30" width="38" height="38" rx="9" fill="#ff4d6d"/><rect x="64" y="30" width="38" height="38" rx="9" fill="#ffd34f"/>
         <rect x="22" y="72" width="38" height="38" rx="9" fill="#3ddc97"/><rect x="64" y="72" width="38" height="38" rx="9" fill="#4aa8ff"/>
         <text x="62" y="140" font-size="10" font-weight="800" text-anchor="middle" fill="#fff" font-family="system-ui,Arial">MEMOCOLOR</text>
       </g>
-    </svg>
+<g transform="translate(332.7,30) scale(0.78) rotate(5 62 80)">
+<rect width="124" height="160" rx="14" fill="#1a0f05"/>
+<rect x="6" y="6" width="112" height="148" rx="10" fill="url(#s4)"/>
+<rect x="6" y="100" width="112" height="54" fill="url(#s5)"/>
+<g fill="#ffd34f"><path d="M26 28 l3 8 8 0 -6.5 5 2.5 8 -7 -5 -7 5 2.5 -8 -6.5 -5 8 0z"/><path d="M98 40 l2 5 5 0 -4 3 1.5 5 -4.5 -3 -4.5 3 1.5 -5 -4 -3 5 0z"/></g>
+<g stroke="#fff" stroke-width="1.5" opacity=".85"><path d="M12 112 L40 154 M40 108 L70 154 M70 106 L100 154"/></g>
+<g transform="translate(62,88) scale(1.7)">
+<rect x="-14" y="-24" width="28" height="28" rx="11" fill="#f2c94c"/>
+<rect x="-7" y="14" width="5" height="10" fill="#fbd7b5"/><rect x="3" y="14" width="5" height="10" fill="#fbd7b5"/>
+<rect x="-9" y="23" width="10" height="4" fill="#fff"/><rect x="1" y="23" width="10" height="4" fill="#fff"/>
+<rect x="-10" y="27" width="13" height="2" fill="#8a8a9a"/><rect x="0" y="27" width="13" height="2" fill="#8a8a9a"/>
+<path d="M-8 -2 L8 -2 L15 17 L-15 17Z" fill="#ff7eb6"/>
+<circle cx="0" cy="-12" r="10" fill="#fbd7b5"/>
+<path d="M-11 -13 A11 11 0 0 1 11 -12.2Z" fill="#f2c94c"/>
+<circle cx="4" cy="-11" r="1.7" fill="#3a2e5c"/>
+<circle cx="-8" cy="-20" r="4" fill="#ff7eb6"/><circle cx="-2" cy="-20" r="4" fill="#ff7eb6"/>
+</g>
+<text x="62" y="148" font-size="10" font-weight="800" text-anchor="middle" fill="#3a2e5c" font-family="system-ui,DejaVu Sans,Arial">LILOCA</text>
+</g>
+</svg>
+
+    <button id="instalar" class="btn instalar">📲 INSTALAR O APP</button>
 
     <h2>ESCOLHA O SEU JOGO</h2>
 
@@ -155,7 +182,7 @@
       </div>
     </section>
 
-    <p class="dica">Abra no celular e toque em "Instalar no celular".</p>
+    <p class="dica">Instale este app para ter todos os jogos num só lugar.</p>
   </main>
 
   <script>
@@ -172,6 +199,21 @@
         } catch (err) { /* se der erro, o link abre normalmente */ }
       });
     });
+  
+    // Instalar este app (tela principal dos jogos)
+    var DP = null, bi = document.getElementById('instalar');
+    window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); DP = e; });
+    window.addEventListener('appinstalled', function () { bi.hidden = true; });
+    if ((window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone) bi.hidden = true;
+    bi.addEventListener('click', function () {
+      try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'instalar-app-berdo', title: 'Instalar app Berdo Fort Games', event: true }); } catch (err) {}
+      if (DP) { DP.prompt(); DP = null; }
+      else {
+        var ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
+        alert(ios ? 'No iPhone: toque em Compartilhar (quadrado com seta) e depois em "Adicionar à Tela de Início".' : 'Toque nos 3 pontinhos do navegador e depois em "Instalar app" ou "Adicionar à tela inicial".');
+      }
+    });
+    if ('serviceWorker' in navigator) window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
   </script>
 </body>
 </html>
