@@ -27,6 +27,15 @@
   <link rel="icon" href="icon-192.png">
   <link rel="apple-touch-icon" href="icon-192.png">
 
+  <!-- Captura o evento de instalação o mais cedo possível -->
+  <script>
+    window.DP = null;
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      window.DP = e;
+    });
+  </script>
+
   <!-- Contador de visitas (GoatCounter) -->
   <script data-goatcounter="https://berdofortgamesbaixarjogo.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
@@ -199,18 +208,17 @@
         } catch (err) { /* se der erro, o link abre normalmente */ }
       });
     });
-  
+
     // Instalar este app (tela principal dos jogos)
-    var DP = null, bi = document.getElementById('instalar');
-    window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); DP = e; });
+    var bi = document.getElementById('instalar');
     window.addEventListener('appinstalled', function () { bi.hidden = true; });
     if ((window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone) bi.hidden = true;
     bi.addEventListener('click', function () {
       try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'instalar-app-berdo', title: 'Instalar app Berdo Fort Games', event: true }); } catch (err) {}
-      if (DP) { DP.prompt(); DP = null; }
+      if (window.DP) { window.DP.prompt(); window.DP = null; }
       else {
         var ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
-        alert(ios ? 'No iPhone: toque em Compartilhar (quadrado com seta) e depois em "Adicionar à Tela de Início".' : 'Toque nos 3 pontinhos do navegador e depois em "Instalar app" ou "Adicionar à tela inicial".');
+        alert(ios ? 'No iPhone/iPad: toque em Compartilhar (quadrado com seta) e depois em "Adicionar à Tela de Início".' : 'Toque nos 3 pontinhos do navegador e depois em "Instalar app" ou "Adicionar à tela inicial".');
       }
     });
     if ('serviceWorker' in navigator) window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
